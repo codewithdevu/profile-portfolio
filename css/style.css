@@ -149,13 +149,13 @@ nav ul li a:hover {
 
 /* About Me section */
 
-.heading{
+.heading {
     font-size: 2rem;
     color: #e0e0e0;
     margin-bottom: 15px;
 }
 
-.line{
+.line {
     width: 60px;
     height: 7px;
     background-color: #FFBF00;
@@ -163,23 +163,23 @@ nav ul li a:hover {
     border-radius: 23px;
 }
 
-.content{
+.content {
     text-align: justify;
 }
 
-#about-me{
+#about-me {
     margin-bottom: 40px;
 }
 
 /* my skills */
 
-.grid-container{
+.grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit , minmax(130px ,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
     gap: 40px;
 }
 
-.item{
+.item {
     padding: 20px;
     border-radius: 10px;
     border: 2px solid #3a3a3a;
@@ -189,65 +189,65 @@ nav ul li a:hover {
     transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
-.item img{
+.item img {
     height: 48px;
     width: 48px;
     filter: invert(75%) sepia(50%) saturate(1000%) hue-rotate(350deg) brightness(110%) contrast(101%);
     margin-bottom: 15px;
 }
 
-.item h3{
+.item h3 {
     font-size: 1rem;
     font-weight: 500;
 }
 
-.item:hover{
+.item:hover {
     transform: scale(1.1);
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
 }
 
 /* Education section */
 
-#education{
+#education {
     margin-top: 40px;
 }
 
-.edtech{
+.edtech {
     position: relative;
     margin-top: 20px;
 }
 
-.year{
+.year {
     font-size: 0.9rem;
     color: #a0a0a0;
     margin-bottom: 5px;
 }
 
-.degree{
+.degree {
     color: #e0e0e0;
     font-size: 1.2rem;
     font-weight: 500;
     margin-bottom: 5px;
 }
 
-.college{
+.college {
     font-style: italic;
     color: #a0a0a0;
     margin-bottom: 10px;
 }
 
-.work{
+.work {
     color: #a0a0a0;
 }
 
 
-.ed-first{
+.ed-first {
     margin-bottom: 30px;
     padding-left: 25px;
     position: relative;
 }
 
-.circle{
+.circle {
     height: 15px;
     width: 15px;
     border: 4px solid #FFBF00;
@@ -258,7 +258,7 @@ nav ul li a:hover {
     z-index: 5;
 }
 
-.liner{
+.liner {
     position: absolute;
     width: 2px;
     top: 0px;
@@ -269,14 +269,14 @@ nav ul li a:hover {
 
 /* portfolio section*/
 
-.project-container{
+.project-container {
     margin-top: 40px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 25px;
 }
 
-.project{
+.project {
     background-color: #1e1e1e;
     border-radius: 12px;
     border: 2px solid #3a3a3a;
@@ -284,35 +284,36 @@ nav ul li a:hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project:hover{
+.project:hover {
     transform: translateY(-15px);
-    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3); ;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+    ;
 }
 
 
-.project img{
+.project img {
     height: 180px;
     width: 100%;
     object-fit: cover;
 }
 
-.card{
+.card {
     padding: 20px;
 }
 
-.card h3{
+.card h3 {
     color: #e0e0e0;
     margin-bottom: 10px;
 
 }
 
-.card p{
+.card p {
     color: #a0a0a0;
     line-height: 1.6;
     margin-bottom: 20px;
 }
 
-.card span{
+.card span {
     background-color: rgba(255, 191, 0, 0.1);
     color: #FFBF00;
     padding: 4px 8px;
@@ -320,16 +321,16 @@ nav ul li a:hover {
     font-size: 0.75rem;
     margin-right: 5PX;
 }
- 
+
 /* responsive */
 
 @media (max-width: 1200px) {
-    .main-container{
+    .main-container {
         grid-template-columns: 350px 1fr;
         gap: 20px;
         padding: 50px;
     }
-    
+
 }
 
 /* Tablets (max-width: 992px) */
@@ -377,21 +378,56 @@ nav ul li a:hover {
 }
 
 /* Small Mobile (max-width: 480px) */
-@media (max-width: 480px) {
-    .profile img {
-        height: 90px;
-        width: 90px;
+
+/* 445px se neeche layout fix */
+@media (max-width: 445px) {
+
+    /* Main container full width & no overflow */
+    .main-container {
+        grid-template-columns: 1fr;
+        padding: 0 12px;
+        gap: 20px;
     }
 
+    /* Sidebar responsive */
+    .sidebar {
+        width: 100%;
+        padding: 25px;
+        position: static;
+    }
+
+    /* Navigation wrap */
+
+    #navigation{
+        padding: 20px 5px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    /* Skills grid compact */
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    /* Project cards full width */
+    .project-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Headings resize */
     .heading {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
 
-    .item {
-        padding: 15px;
-    }
-
-    .project img {
-        height: 140px;
+    /* Profile image smaller */
+    .profile img {
+        width: 90px;
+        height: 90px;
     }
 }
