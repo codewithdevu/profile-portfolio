@@ -22,6 +22,9 @@ body {
 }
 
 .sidebar {
+    position: sticky;
+    z-index: -1;
+    top: 0;
     height: auto;
     background-color: #2a2a2a;
     border: 2px solid #3a3a3a;
@@ -263,4 +266,57 @@ nav ul li a:hover {
     bottom: 0px;
     left: 6px;
     border: 2px solid #3a3a3a;
+}
+
+/* portfolio */
+
+.project-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.project{
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    border: 2px solid #3a3a3a;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3 ease;
+}
+
+.project:hover{
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3); ;
+}
+
+
+.project img{
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card{
+    padding: 20px;
+}
+
+.card h3{
+    color: #e0e0e0;
+    margin-bottom: 10px;
+
+}
+
+.card p{
+    color: #a0a0a0;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.card span{
+    background-color: rgba(255, 191, 0, 0.1);
+    color: #FFBF00;
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    margin-right: 5PX;
 }
