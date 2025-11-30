@@ -271,6 +271,7 @@ nav ul li a:hover {
 /* portfolio */
 
 .project-container{
+    margin-top: 40px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 25px;
