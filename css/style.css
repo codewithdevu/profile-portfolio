@@ -299,6 +299,7 @@ nav ul li a:hover {
 
 .card {
     padding: 20px;
+    display: inline-block;
 }
 
 .card h3 {
